@@ -1,0 +1,161 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ActivateScript = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local ImageButton = Instance.new("ImageButton")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local UIGradient = Instance.new("UIGradient")
+local blur = Instance.new("BlurEffect")
+
+--Properties:
+
+ActivateScript.Name = "ActivateScript"
+ActivateScript.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ActivateScript.ResetOnSpawn = false
+ActivateScript.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ActivateScript
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0.525624216, 0, 0.527881026, 0)
+Frame.Size = UDim2.new(0.239266947, 0, 0.275092989, 0)
+Frame.Active = true
+Frame.Draggable = true
+
+ImageLabel.Parent = Frame
+ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+ImageLabel.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+ImageLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+ImageLabel.Size = UDim2.new(1, 0,1.297, 0)
+ImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+ImageLabel.ImageTransparency = 1.000
+
+UICorner.CornerRadius = UDim.new(0, 16)
+UICorner.Parent = ImageLabel
+
+ImageButton.Parent = ImageLabel
+ImageButton.AnchorPoint = Vector2.new(0.5, 0.5)
+ImageButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+ImageButton.Position = UDim2.new(0.5, 0, 0.746753216, 0)
+ImageButton.Size = UDim2.new(0.649350643, 0, 0.214285716, 0)
+ImageButton.Image = ""
+ImageButton.ImageColor3 = Color3.fromRGB(25, 25, 25)
+ImageButton.ImageTransparency = 1
+ImageButton.MouseButton1Down:Connect(function()
+	game.Lighting.Blur.Size = 40
+	ImageLabel.Transparency = 0.1
+	ImageButton.BackgroundTransparency = 0.1
+	TextLabel.TextTransparency = 0.1
+	TextLabel.Transparency = 0.1
+	TextLabel_2.TextTransparency = 0.1
+	wait(0.1)
+	game.Lighting.Blur.Size = 35
+	ImageLabel.Transparency = 0.2
+	ImageButton.BackgroundTransparency = 0.2
+	TextLabel.TextTransparency = 0.2
+	TextLabel.Transparency = 0.2
+	TextLabel_2.TextTransparency = 0.2
+	wait(0.1)
+	game.Lighting.Blur.Size = 30
+	ImageLabel.Transparency = 0.3
+	ImageButton.BackgroundTransparency = 0.3
+	TextLabel.TextTransparency = 0.3
+	TextLabel.Transparency = 0.3
+	TextLabel_2.TextTransparency = 0.3
+	wait(0.1)
+	game.Lighting.Blur.Size = 25
+	ImageLabel.Transparency = 0.4
+	ImageButton.BackgroundTransparency = 0.4
+	TextLabel.TextTransparency = 0.4
+	TextLabel.Transparency = 0.4
+	TextLabel_2.TextTransparency = 0.4
+	wait(0.1)
+	game.Lighting.Blur.Size = 20
+	ImageLabel.Transparency = 0.5
+	ImageButton.BackgroundTransparency = 0.5
+	TextLabel.TextTransparency = 0.5
+	TextLabel.Transparency = 0.5
+	TextLabel_2.TextTransparency = 0.5
+	wait(0.1)
+	game.Lighting.Blur.Size = 15
+	ImageLabel.Transparency = 0.6
+	ImageButton.BackgroundTransparency = 0.6
+	TextLabel.TextTransparency = 0.6
+	TextLabel.Transparency = 0.6
+	TextLabel_2.TextTransparency = 0.6
+	wait(0.1)
+	game.Lighting.Blur.Size = 10
+	ImageLabel.Transparency = 0.7
+	ImageButton.BackgroundTransparency = 0.7
+	TextLabel.TextTransparency = 0.7
+	TextLabel.Transparency = 0.7
+	TextLabel_2.TextTransparency = 0.7
+	wait(0.1)
+	game.Lighting.Blur.Size = 5
+	ImageLabel.Transparency = 0.8
+	ImageButton.BackgroundTransparency = 0.8
+	TextLabel.TextTransparency = 0.8
+	TextLabel.Transparency = 0.8
+	TextLabel_2.TextTransparency = 0.8
+	wait(0.1)
+	game.Lighting.Blur.Size = 2
+	ImageLabel.Transparency = 0.9
+	ImageButton.BackgroundTransparency = 0.9
+	TextLabel.TextTransparency = 0.9
+	TextLabel.Transparency = 0.9
+	TextLabel_2.TextTransparency = 0.9
+	wait(0.1)
+	game.Lighting.Blur.Size = 0
+	ImageLabel.Transparency = 1
+	ImageButton.BackgroundTransparency = 1
+	TextLabel.TextTransparency = 1
+	TextLabel.Transparency = 1
+	TextLabel_2.TextTransparency = 1
+	Frame:Destroy()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/sxunhub/Sun-Hub/main/Sun%20Hub"))()
+end)
+
+UICorner_2.Parent = ImageButton
+
+TextLabel.Parent = ImageButton
+TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.5, 0, 0.484848499, 0)
+TextLabel.Size = UDim2.new(0.899999976, 0, 0.727272749, 0)
+TextLabel.Font = Enum.Font.GothamBold
+TextLabel.Text = "Activate Key"
+TextLabel.TextColor3 = Color3.fromRGB(197, 197, 197)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = ImageLabel
+TextLabel_2.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.5, 0, 0.330852062, 0)
+TextLabel_2.Size = UDim2.new(0.83116883, 0, 0.506493509, 0)
+TextLabel_2.Font = Enum.Font.GothamBold
+TextLabel_2.Text = "Sun Hub v1.0.0.0 (PAID)"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 106, 0)), ColorSequenceKeypoint.new(0.54, Color3.fromRGB(255, 181, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 0))}
+UIGradient.Rotation = -90
+UIGradient.Parent = TextLabel_2
+
+blur.Name = "Blur"
+blur.Parent = game.Lighting
+blur.Enabled = true
+blur.Size = 50
